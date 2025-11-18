@@ -4,7 +4,7 @@ const cors=require('cors');
 const connectDb = require('./config/db');
 const route=require("./routes/userRoutess")
 const app=express();
-const port='https://feedback-formback.vercel.app/' 
+const port='https://feedback-formback.vercel.app' 
 
 app.use(express.json())
 app.use(cors());
@@ -18,5 +18,5 @@ app.get('/',(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log(`sercer running http://localhost:${port}`)
+    console.log(port)
 })

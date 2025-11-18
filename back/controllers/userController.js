@@ -21,6 +21,10 @@ const form = async (req, res) => {
     return res.status(500).json({ error: "Server error" });
   }
 };
+
+const check=async(req,res)=>{
+  res.send("Deployment Is working")
+}
 const getfeddback = async (req, res) => {
   try {
     const all = await Feedback.find().sort({ createdAt: -1 });
@@ -46,4 +50,4 @@ const deleteForm = async (req, res) => {
     res.send("Error deleting user");
   }
 };
-module.exports = { form, getfeddback,deleteForm };
+module.exports = { form, getfeddback,deleteForm,check};
