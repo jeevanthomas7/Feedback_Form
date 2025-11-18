@@ -4,12 +4,10 @@ const cors=require('cors');
 const connectDb = require('./config/db');
 const route=require("./routes/userRoutess")
 const app=express();
-const port=process.env.PORT 
+const port='https://feedback-formback.vercel.app/' 
 
 app.use(express.json())
-app.use(cors({
-    origin:"http://localhost:5174"
-}))
+app.use(cors());
 
 connectDb();
 
