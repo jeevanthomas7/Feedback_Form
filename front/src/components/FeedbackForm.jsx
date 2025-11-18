@@ -24,7 +24,7 @@ export default function FeedbackForm() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:4000/form", form);
+      const res = await axios.post("https://feedback-formback.vercel.app/form", form);
 
       setSuccess("Feedback submitted!");
       setForm({ name: "", email: "", message: "", rating: 0 });

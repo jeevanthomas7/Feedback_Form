@@ -14,7 +14,7 @@ connectDb();
 app.use('/form',route)
 
 app.get('/',(req,res)=>{
-    res.send("Workinggg")
+    res.send("Workinggg new Updates")
 })
 
 app.listen(port,()=>{

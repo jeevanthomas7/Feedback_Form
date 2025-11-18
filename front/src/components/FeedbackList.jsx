@@ -5,7 +5,7 @@ export default function FeedbackList() {
   const [data, setData] = useState([]);
 
   const loadData = async () => {
-    const res = await axios.get("http://localhost:4000/form");
+    const res = await axios.get("https://feedback-formback.vercel.app/form");
     setData(res.data);
   };
 
@@ -15,7 +15,7 @@ export default function FeedbackList() {
 
   async function deleteh(id) {
     try {
-      await axios.delete(`http://localhost:4000/form/${id}`)
+      await axios.delete(`https://feedback-formback.vercel.app/form/${id}`)
       setData(prev => prev.filter(item => item._id !== id))
     } catch (error) {
       console.log(error)
